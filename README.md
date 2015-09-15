@@ -1,0 +1,3 @@
+# ClojureScript on React Native for Android
+
+Proof of concept for compiling ClojureScript for use on React Native for Android. The original JavaScript source is in [index.android.js.original](https://github.com/nicholaskariniemi/ReactNativeCljs/blob/master/index.android.js.original) and the ported ClojureScript code is in [src/hello/core.cljs](https://github.com/nicholaskariniemi/ReactNativeCljs/blob/master/src/hello/core.cljs).
