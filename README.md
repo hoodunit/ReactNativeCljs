@@ -6,6 +6,9 @@ Proof of concept for compiling ClojureScript for use on React Native for Android
 1. Set up project for usage:
   `npm install && react-native android`
 1. Plug in Android device (or load up emulator).
+1. Set up a reverse socket connection so your app grabs the JavaScripts from the correct place.
+
+  `adb reverse tcp:8081 tcp:8081`
 1. Build app and push it to the device. Enable auto-refresh in the app options.
 
   `react-native run-android`
@@ -17,5 +20,9 @@ Proof of concept for compiling ClojureScript for use on React Native for Android
 1. Start incremental ClojureScript compilation to recompile when source files change.
 
   `./watch.sh`
+
+1. Access logs like so:
+
+  `adb logcat *:S ReactNative:V ReactNativeJS:V`
 
 1. Hack away in ClojureScript. Saved changes will be automatically compiled to `index.android.js` and pushed out to the app.
